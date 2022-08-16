@@ -1,4 +1,3 @@
-import { removeContact } from 'Redux/contacts/contacts-actions';
 import { useDispatch, useSelector } from 'react-redux';
 import s from './ContactsList.module.css';
 
