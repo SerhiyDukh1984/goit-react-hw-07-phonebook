@@ -12,7 +12,7 @@ export const getContactsApi = () => {
 
 export const addContactsApi = contact => {
   return axios
-    .post('/contact.json', contact)
+    .post('https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts', contact)
 
     .then(({ data }) => {
       const id = nanoid();

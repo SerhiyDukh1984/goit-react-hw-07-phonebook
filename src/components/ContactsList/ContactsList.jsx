@@ -1,9 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { removeContacts } from 'Redux/contacts/contactsOperation';
 import s from './ContactsList.module.css';
 
 export default function ContactsList() {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.items);
+  console.log('🚀 ~ contacts', contacts);
   const filter = useSelector(state => state.contacts.filter);
 
   const getFilteredContacts = () => {
@@ -22,7 +24,7 @@ export default function ContactsList() {
           <button
             className={s.button}
             type="button"
-            onClick={() => dispatch(removeContact(contact.id))}
+            onClick={() => dispatch(removeContacts(contact.id))}
           >
             Delete
           </button>

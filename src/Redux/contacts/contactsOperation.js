@@ -3,12 +3,12 @@ import { getContactsApi, addContactsApi, removeContactsApi } from 'Api/Api';
 
 export const getContacts = createAsyncThunk(
   'getContacts',
-  async (param, { rejectWithValue }) => {
+  async (param, thunkApi) => {
     try {
       const contacts = await getContactsApi();
       return contacts;
     } catch (error) {
-      return rejectWithValue(error.message);
+      return thunkApi.rejectWithValue(error.message);
     }
   }
 );
