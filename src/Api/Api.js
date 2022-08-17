@@ -1,25 +1,25 @@
 import axios from 'axios';
-import { nanoid } from '@reduxjs/toolkit';
 
-export const getContactsApi = () => {
-  return axios
-    .get('https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts')
-    .then(data => {
-      return data;
-    })
-    .catch(error => console.log(error));
+export const getContactsApi = async () => {
+  const response = await axios.get(
+    'https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts'
+  );
+  // return response.data;
+  console.log('🚀 ~ get', response.data);
 };
 
-export const addContactsApi = contact => {
-  return axios
-    .post('https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts', contact)
-
-    .then(({ data }) => {
-      const id = nanoid();
-      return { data };
-    });
+export const addContactsApi = async contact => {
+  const response = await axios.post(
+    'https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts',
+    contact
+  );
+  // return response.data;
+  console.log('🚀 ~ post', response.data.name);
 };
 
-export const removeContactsApi = id => {
-  return axios.delete(`/contact/${id}.json`).then(() => id);
+export const removeContactsApi = async id => {
+  await axios.delete(
+    `https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts/contacts/${id}`
+  );
+  return id;
 };
