@@ -21,7 +21,7 @@ const App = () => {
         <div className={s.container}>
           <ContactForm />
           <div>
-            <h2>Contacts ({contacts})</h2>
+            <h2 className={s.contacts}>Contacts ({contacts})</h2>
             <Filter />
             <ContactsList />
           </div>

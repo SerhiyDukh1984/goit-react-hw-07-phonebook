@@ -1,5 +1,5 @@
 .section {
-  padding: 50px;
+  padding: 20px;
   width: 100%px;
   margin-right: auto;
   margin-left: auto;
@@ -8,9 +8,9 @@
   background-size: 25%;
 }
 
-.title {
+/* .title {
   display: inline-block;
   width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  margin-left: 800px;
+  /* margin-right: auto; */
+/* } */

@@ -19,7 +19,8 @@ export default function ContactsList() {
     <ul className={s.list}>
       {filteredContacts.map(contact => (
         <li className={s.item} key={contact.id}>
-          {contact.name}: {contact.number}
+          <span className={s.contact_name}>{contact.name}:</span>
+          <span className={s.contact_number}>{contact.number}</span>
           <button
             className={s.button}
             type="button"
