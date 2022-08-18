@@ -59,7 +59,7 @@ const ContactForm = () => {
       <label className={s.label}>
         <h2 className={s.title}>Number</h2>
         <input
-          className={s.input}
+          className={s.input_num}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

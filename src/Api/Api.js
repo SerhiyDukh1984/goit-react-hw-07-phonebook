@@ -4,8 +4,8 @@ export const getContactsApi = async () => {
   const response = await axios.get(
     'https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts'
   );
-  // return response.data;
-  console.log('🚀 ~ get', response.data);
+  console.log(response.data);
+  return response.data;
 };
 
 export const addContactsApi = async contact => {
@@ -13,13 +13,12 @@ export const addContactsApi = async contact => {
     'https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts',
     contact
   );
-  // return response.data;
-  console.log('🚀 ~ post', response.data.name);
+  return response.data;
 };
 
 export const removeContactsApi = async id => {
   await axios.delete(
-    `https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts/contacts/${id}`
+    `https://62fbaa71e4bcaf53518aa783.mockapi.io/contacts/${id}`
   );
   return id;
 };

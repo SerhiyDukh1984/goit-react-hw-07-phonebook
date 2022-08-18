@@ -1,5 +1,16 @@
 .section {
-  width: 380px;
+  padding: 50px;
+  width: 100%px;
   margin-right: auto;
   margin-left: auto;
+  background-image: url(../../icons/tryzub5.svg);
+  background-repeat: no-repeat;
+  background-size: 25%;
+}
+
+.title {
+  display: inline-block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }

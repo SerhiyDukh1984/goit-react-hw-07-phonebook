@@ -3,13 +3,14 @@ import { filterContact } from 'Redux/contacts/contacts-actions';
 import s from './/Filter.module.css';
 
 export default function Filter() {
-  const filter = useSelector(state => state.contacts.filter);
+  let filter = useSelector(state => state.contacts.filter);
   const dispatch = useDispatch();
 
   const handleChange = e => {
     const { value } = e.target;
 
     dispatch(filterContact(value));
+    filter = '';
   };
 
   return (

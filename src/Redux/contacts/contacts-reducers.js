@@ -3,9 +3,10 @@ import { filterContact } from './contacts-actions';
 import { getContacts, addContacts, removeContacts } from './contactsOperation';
 
 const itemsReduser = createReducer([], {
-  [getContacts.fullfield]: (_, { payload }) => payload,
-  [addContacts.fullfield]: (state, { payload }) => [...state, payload],
-  [removeContacts.fullfield]: (state, { payload }) =>
+  [getContacts.fulfilled]: (_, { payload }) => payload,
+  [addContacts.fulfilled]: (state, { payload }) => [...state, payload],
+
+  [removeContacts.fulfilled]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
 });
 
@@ -15,15 +16,15 @@ const filterReduser = createReducer('', {
 
 const isLoadingReduser = createReducer(false, {
   [getContacts.pending]: () => true,
-  [getContacts.fullfield]: () => false,
+  [getContacts.fulfilled]: () => false,
   [getContacts.rejected]: () => false,
 
   [addContacts.pending]: () => true,
-  [addContacts.fullfield]: () => false,
+  [addContacts.fulfilled]: () => false,
   [addContacts.rejected]: () => false,
 
   [removeContacts.pending]: () => true,
-  [removeContacts.fullfield]: () => false,
+  [removeContacts.fulfilled]: () => false,
   [removeContacts.rejected]: () => false,
 });
 
