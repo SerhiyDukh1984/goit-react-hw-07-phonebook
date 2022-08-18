@@ -9,7 +9,7 @@ import {
 } from 'redux-persist';
 import { contactsReducers } from './contacts/contacts-reducers';
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     contacts: contactsReducers,
   },
@@ -20,5 +20,3 @@ const store = configureStore({
       },
     }),
 });
-
-export default store;
