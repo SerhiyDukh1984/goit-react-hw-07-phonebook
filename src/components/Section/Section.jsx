@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import s from './Section.module.css';
 
 export default function Section({ children }) {
@@ -10,8 +9,3 @@ export default function Section({ children }) {
     </section>
   );
 }
-
-Section.propTypes = {
-  // title: PropTypes.string.isRequired,
-  // children: PropTypes.array.isRequired,
-};
