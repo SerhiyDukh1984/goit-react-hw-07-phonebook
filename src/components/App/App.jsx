@@ -20,7 +20,7 @@ const App = () => {
         <h1 className={s.title}>Телефонна книга</h1>
         <div className={s.container}>
           <ContactForm />
-          <div>
+          <div className={s.item}>
             <h2 className={s.contacts}>Контакти ({contacts})</h2>
             <Filter />
             <ContactsList />
