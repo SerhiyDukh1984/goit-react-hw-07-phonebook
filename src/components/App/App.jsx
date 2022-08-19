@@ -17,11 +17,11 @@ const App = () => {
   return (
     <>
       <Section>
-        <h1 className={s.title}>Phonebook</h1>
+        <h1 className={s.title}>Телефонна книга</h1>
         <div className={s.container}>
           <ContactForm />
           <div>
-            <h2 className={s.contacts}>Contacts ({contacts})</h2>
+            <h2 className={s.contacts}>Контакти ({contacts})</h2>
             <Filter />
             <ContactsList />
           </div>

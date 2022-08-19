@@ -43,7 +43,7 @@ const ContactForm = () => {
   return (
     <form className={s.form} onSubmit={handleSubmit}>
       <label className={s.label}>
-        <h2 className={s.title}>Name</h2>
+        <h2 className={s.title}>Ім'я</h2>
         <input
           className={s.input}
           type="text"
@@ -57,7 +57,7 @@ const ContactForm = () => {
       </label>
 
       <label className={s.label}>
-        <h2 className={s.title}>Number</h2>
+        <h2 className={s.title}>Номер</h2>
         <input
           className={s.input_num}
           type="tel"
@@ -69,7 +69,7 @@ const ContactForm = () => {
           onChange={handleChange}
         />
         <button type="submit" className={s.button}>
-          Add contact
+          Добавити
         </button>
       </label>
     </form>

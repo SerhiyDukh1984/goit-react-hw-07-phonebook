@@ -26,7 +26,7 @@ export default function ContactsList() {
             type="button"
             onClick={() => dispatch(removeContacts(contact.id))}
           >
-            Delete
+            Видалити
           </button>
         </li>
       ))}

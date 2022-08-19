@@ -15,7 +15,7 @@ export default function Filter() {
 
   return (
     <label className={s.label}>
-      Find contacts
+      Пошук контактів
       <input
         className={s.input}
         type="text"

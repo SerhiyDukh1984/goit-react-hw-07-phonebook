@@ -4,12 +4,11 @@
 }
 
 .title {
-  width: 220px;
+  width: 520px;
   font-size: 60px;
   font-weight: bold;
   margin-top: 0;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 40%;
 }
 
 .contacts {
