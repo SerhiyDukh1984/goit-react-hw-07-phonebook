@@ -1,5 +1,6 @@
 .item {
   display: flex;
+  align-items: flex-end;
   width: 500px;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -36,7 +37,7 @@
 .contact_name {
   margin-right: 5px;
   width: 600px;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
 }
 
