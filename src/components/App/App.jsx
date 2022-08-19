@@ -26,6 +26,7 @@ const App = () => {
             <ContactsList />
           </div>
         </div>
+        <h2 className={s.text}>русский военный корабль, иди НАХ*Й</h2>
       </Section>
     </>
   );
